@@ -32,6 +32,8 @@ class ModelDownloader {
     }
   }
 
+  // TODO: Implement ModelDownloader methods
+
   enum DownloadError: Error {
 
     // The download couldn't be initialized because Firebase has not been configured

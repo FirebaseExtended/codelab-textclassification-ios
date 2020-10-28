@@ -14,7 +14,6 @@
 
 import UIKit
 import TensorFlowLite
-import TensorFlowLiteTaskText
 
 class ViewController: UIViewController {
 
@@ -22,14 +21,11 @@ class ViewController: UIViewController {
   @IBOutlet weak var textField: UITextField!
   @IBOutlet weak var textFieldBottomConstraint: NSLayoutConstraint!
 
-    private var classifier: TFLNLClassifier?
+  // TODO: Add an TFLNLClassifier property.
 
-    func loadModel() {
-      guard let modelPath = Bundle.main.path(
-        forResource: "text_classification", ofType: "tflite") else { return }
-      let options = TFLNLClassifierOptions()
-      self.classifier = TFLNLClassifier.nlClassifier(modelPath: modelPath, options: options)
-    }
+  func loadModel() -> String? {
+    return Bundle.main.path(forResource: "text_classification", ofType: "tflite")
+  }
 
   private var results: [ClassificationResult] = []
 
@@ -48,7 +44,7 @@ class ViewController: UIViewController {
     textField.delegate = self
 
     // Initialize a TextClassification instance
-    loadModel()
+    _ = loadModel()
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -70,10 +66,9 @@ class ViewController: UIViewController {
 
   /// Classify the text and display the result.
   private func classify(text: String) {
-    guard let classifier = self.classifier else { return }
-    let classifierResults = classifier.classify(text: text)
-    let result = ClassificationResult(text: text, results: classifierResults)
-    results.append(result)
+    
+    // TODO: Run sentiment analysis on the input text
+
     tableView.reloadData()
   }
 
