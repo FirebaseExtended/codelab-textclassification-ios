@@ -64,7 +64,7 @@ PODS:
     - TensorFlowLiteSwift/Core (= 2.3.0)
   - TensorFlowLiteSwift/Core (2.3.0):
     - TensorFlowLiteC (= 2.3.0)
-  - TensorFlowLiteTaskText (0.0.1-nightly.20201005):
+  - TensorFlowLiteTaskText (0.0.1-nightly.20201027):
     - GoogleToolboxForMac (= 2.2.1)
 
 DEPENDENCIES:
@@ -82,8 +82,8 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
   TensorFlowLiteC: 51f50caf5777f740a70e2c1a5dbdc149e7aeb50b
   TensorFlowLiteSwift: fb152cc1eec36b25b03a23c07f5d58113170af58
-  TensorFlowLiteTaskText: d3c15b9a98b6d7ec998b08a1c1415798420740ed
+  TensorFlowLiteTaskText: 9ee19b73a970b9a9f2bec46d035ce6b093bd8aa5
 
 PODFILE CHECKSUM: 5e57e01c9facb01b67d92954159a0e1ae3294685
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0
